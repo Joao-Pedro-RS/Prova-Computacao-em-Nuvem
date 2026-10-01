@@ -28,7 +28,7 @@ root@ubuntu:~$ docker cp index.html atendimento:/usr/share/nginx/html/index.html
 Successfully copied 2.05kB to atendimento:/usr/share/nginx/html/index.html
 root@ubuntu:~$ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                     NAMES
-361b4dff2613   nginx:alpine   "/docker-entrypoint.…"   53 seconds ago   Up 53 seconds   0.0.0.0:8081->80/tcp, [::]:8082->80/tcp   atendimento
+361b4dff2613   nginx:alpine   "/docker-entrypoint.…"   53 seconds ago   Up 53 seconds   0.0.0.0:8082->80/tcp, [::]:8082->80/tcp   atendimento
 root@ubuntu:~$ curl http://localhost:8082
 <!DOCTYPE html>
 html lang="pt-BR">
