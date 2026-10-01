@@ -9,12 +9,22 @@ Cole aqui a saída do comando docker ps: CONTAINER ID   IMAGE          COMMAND  
 96b0362192a5   nginx:alpine   "/docker-entrypoint.…"   1 second ago   Up Less than a second   0.0.0.0:8082->80/tcp, [::]:8082->80/tcp   atendimento
 
 ##Teste da página
-Cole aqui a resposta do comando curl http://localhost:8082: root@ubuntu:~$ curl http://localhost:8082
+Cole aqui a resposta do comando curl http://localhost:8082: root@ubuntu:~$ curl [http://localhost:8082
 
 html lang="pt-BR">
 
 <title>atendimento</title>
-atendimento disponivel
+atendimento disponivel](http://localhost:8082
+<!DOCTYPE html>
+html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>atendimento</title>
+</head>
+<body>
+<h1>atendimento disponivelr</h1>
+</body>
+</html>
 
 ##Explicação
 Com minhas palavras, qual é a diferença entre a imagem nginx:alpine e o contêiner atendimento? Para que serviu o mapeamento 8082:80
