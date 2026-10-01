@@ -6,11 +6,11 @@ root@ubuntu:~$ cat > index.html <<'EOF'
 > <title>atendimento</title>
 > </head>
 > <body>
-> <h1>atendimento no ar</h1>
+> <h1>atendimento disponivelr</h1>
 > </body>
 > </html>
 > EOF
-root@ubuntu:~$ docker run -d --name atendimento -p 8081:80 nginx:alpine
+root@ubuntu:~$ docker run -d --name atendimento -p 8082:80 nginx:alpine
 Unable to find image 'nginx:alpine' locally
 alpine: Pulling from library/nginx
 e2de96513ba9: Pull complete 
@@ -28,15 +28,15 @@ root@ubuntu:~$ docker cp index.html atendimento:/usr/share/nginx/html/index.html
 Successfully copied 2.05kB to atendimento:/usr/share/nginx/html/index.html
 root@ubuntu:~$ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                     NAMES
-361b4dff2613   nginx:alpine   "/docker-entrypoint.…"   53 seconds ago   Up 53 seconds   0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   atendimento
-root@ubuntu:~$ curl http://localhost:8081
+361b4dff2613   nginx:alpine   "/docker-entrypoint.…"   53 seconds ago   Up 53 seconds   0.0.0.0:8081->80/tcp, [::]:8082->80/tcp   atendimento
+root@ubuntu:~$ curl http://localhost:8082
 <!DOCTYPE html>
 html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Atendimento</title>
+<title>atendimento</title>
 </head>
 <body>
-<h1>Atendimento disponivelr</h1>
+<h1>atendimento disponivelr</h1>
 </body>
 </html>
